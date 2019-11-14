@@ -13,10 +13,10 @@ while True:
         cv2.imwrite(filename='saved_img.jpg', img=frame)
         webcam.release()
         img_new = cv2.imread('saved_img.jpg', cv2.IMREAD_GRAYSCALE)
-        img_new = cv2.imshow("Captured Image", img_new)
+        cv2.imshow("Captured Image", img_new)
         cv2.waitKey(1650)
         cv2.destroyAllWindows()
-        cv2.imwrite(filename='saved_img-final.jpg', img=gray)
+        cv2.imwrite(filename='saved_img-final.jpg', img=img_new)
         print("Saved BGR image as grayscale")
 
         break
