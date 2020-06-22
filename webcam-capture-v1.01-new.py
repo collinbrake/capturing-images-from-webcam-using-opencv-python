@@ -12,7 +12,7 @@ while True:
     if key == ord('s'):
         cv.imwrite(filename='saved_img.jpg', img=frame)
         webcam.release()
-        img_new = cv2.imread('saved_img.jpg', cv2.IMREAD_GRAYSCALE)
+        img_new = cv.imread('saved_img.jpg', cv.IMREAD_GRAYSCALE)
         cv.imshow("Captured Image", img_new)
         cv.waitKey(1650)
         cv.destroyAllWindows()
